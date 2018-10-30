@@ -28,6 +28,8 @@ public class LuoTa{
 
     public static void main(String[] args) {
         haoNi(3,'A','B','C');
+        String s="zhouqing";
+        System.out.println(s);
 
     }
 } 
