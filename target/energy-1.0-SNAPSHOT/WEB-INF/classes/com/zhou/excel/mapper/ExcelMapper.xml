@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhou.excel.mapper.ExcelMapper">
+    <select id="getRiQi" resultType="Excel">
+        /*sql语句*/
+        select id,point,riqi,attu from exce where riqi = #{riqi}
+    </select>
+    <select id="queryAllWithoutParam" resultType="Excel">
+		SELECT
+			point,
+			riqi,
+			attu
+		FROM
+			exce
+		ORDER BY riqi DESC
+
+	</select>
+
+	<select id="queryAll" resultType="Excel">
+		select id,point,riqi,attu from exce order by riqi LIMIT #{offset},#{limit}
+	</select>
+
+	<insert id="insertExcel">
+		insert into exce(point,riqi,attu) values(#{point},#{riqi},#{attu})
+	</insert>
+
+</mapper>
