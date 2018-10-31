@@ -20,6 +20,7 @@ public class TestNode{
         //取出下一个节点
         System.out.println(n1.next().next().next().getData());
         System.out.println(n1.next().next().next().next().isLast());
+        System.out.println("周清的单链表");
 
     }
 
